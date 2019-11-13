@@ -3729,6 +3729,7 @@ ul.project_files li a i {
 /** login **/
 .login {
   background:#F7F7F7;
+  height: 100vh;
 }
 .login .fa-paw {
   font-size: 26px;
@@ -3739,12 +3740,11 @@ a.hiddenanchor {
 .login_wrapper {
   right: 0px;
   margin: 0px auto;
-  margin-top: 5%;
+  padding-top: 5%;
   max-width: 350px;
   position: relative;
 }
 .registration_form, .login_form {
-  position: absolute;
   top: 0px;
   width: 100%;
 }
