@@ -1075,10 +1075,9 @@
   display: inline-block; }
 
 .nav_menu {
-  float: left;
   background: #EDEDED;
   border-bottom: 1px solid #D9DEE4;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
   width: 100%;
   position: relative; }
 
@@ -1101,7 +1100,6 @@
   min-height: 100%;
   width: 230px;
   padding: 0;
-  position: absolute;
   display: -ms-flexbox;
   display: flex;
   z-index: 1; }
@@ -1114,8 +1112,7 @@ body .container.body .right_col {
   background: #F7F7F7; }
 
 .nav-md .container.body .right_col {
-  padding: 10px 20px 0;
-  margin-left: 230px; }
+  padding: 10px 20px 0; }
 
 .nav_title {
   width: 230px;
@@ -1249,10 +1246,6 @@ body {
   font-size: 13px;
   font-weight: 400;
   line-height: 1.471; }
-
-.main_container .top_nav {
-  display: block;
-  margin-left: 230px; }
 
 .no-padding {
   padding: 0 !important; }
@@ -1540,12 +1533,11 @@ a:hover, a:focus {
   margin-bottom: 0 !important; }
 
 .toggle {
-  float: left;
   margin: 0;
   width: 70px; }
 
 .toggle a {
-  padding: 15px 15px 0;
+  padding: 15px 15px 10px;
   margin: 0;
   cursor: pointer; }
 
@@ -2338,9 +2330,6 @@ span.right {
   white-space: nowrap;
   position: relative; }
 
-@media (min-width: 992px) {
-  footer {
-    margin-left: 230px; } }
 @media (min-width: 992px) {
   .tile_count .tile_stats_count {
     margin-bottom: 10px;
@@ -4867,3 +4856,24 @@ ul.notifications {
   border: 1px solid #e5e5e5; }
 
 /** /Dropzone.js **/
+.main_container {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  grid-template-areas: "nav head" "nav content" "nav footer";
+  -ms-grid-rows: max-content auto 40px;
+      grid-template-rows: max-content auto 40px;
+  -ms-grid-columns: 230px auto;
+      grid-template-columns: 230px auto; }
+
+.main_container > .left_col {
+  grid-area: nav; }
+
+.top_nav {
+  grid-area: head; }
+
+.right_col {
+  grid-area: content; }
+
+footer {
+  grid-area: footer; }
