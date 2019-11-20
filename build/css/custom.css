@@ -4017,7 +4017,8 @@ ul.project_files li a i {
 /** login **/
 .login {
   background: #F7F7F7;
-  height: 100vh; }
+  height: 100vh;
+  padding: 10px; }
 
 .login .fa-paw {
   font-size: 26px; }
